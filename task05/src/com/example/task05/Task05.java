@@ -3,9 +3,17 @@ package com.example.task05;
 public class Task05 {
 
     public static String solution(int x) {
-
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
-
+        String num = String.valueOf(x);
+        String evenNums = "02468";
+        boolean flag = true;
+        for (int i = 0; i < num.length(); i++) {
+            char e = num.charAt(i);
+            if (evenNums.indexOf(e) == -1)
+                flag = false;
+        }
+        if (flag) {
+            return "TRUE";
+        }
         return "FALSE";
     }
 
